@@ -1,0 +1,2 @@
+python clear.py
+exit
