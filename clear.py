@@ -20,6 +20,14 @@ def move_file(filename, start_dest, end_dest):
 
 
 for filename in os.listdir(directory):
+  if filename == 'Games':
+    continue
+  if filename == 'desktop.ini':
+    continue
+  if filename.startswith('~'):
+    continue
+  if filename.startswith('.'):
+    continue
   if not filename.endswith(".lnk"):
     create_shortcut(filename, directory)
     move_file(filename, directory, directory_move)
