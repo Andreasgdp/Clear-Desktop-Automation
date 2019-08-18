@@ -24,6 +24,7 @@ def move_file(filename, start_dest, end_dest):
     new_filename = f'({counter}) - {filename}'
     counter += 1
     file_exists = os.path.isfile(f'{end_dest}{new_filename}')
+  # TODO make it work also if there is no need for new_file (when file_exists == false)
   os.rename(f'{start_dest}{filename}', f'{end_dest}{new_filename}')
 
 
