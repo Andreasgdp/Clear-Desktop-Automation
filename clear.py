@@ -1,6 +1,9 @@
 import os
 import winshell
 
+# TODO make the program use some kind of observer like https://www.youtube.com/watch?v=qbW6FRbaSl0
+# TODO make the program an executable that can be run without terminal as a backgroundprocess in windows (https://www.youtube.com/watch?v=lOIJIk_maO4)
+
 directory = 'C:/Users/andre/Desktop/'
 
 directory_move = 'C:/Users/andre/OneDrive - Syddansk Erhvervsskole/MISC/'
