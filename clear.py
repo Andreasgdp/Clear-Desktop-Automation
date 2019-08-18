@@ -15,8 +15,13 @@ def create_shortcut(filename, dest):
 
 
 def move_file(filename, start_dest, end_dest):
-  # TODO check if file with same name exist and if ad a (n)-suffix to the filename
-  os.rename(f"{start_dest}{filename}", f"{end_dest}{filename}")
+  counter = 1
+  file_exists = os.path.isfile(f'{end_dest}{filename}')
+  while file_exists:
+    new_filename = f'({counter}) - {filename}'
+    counter += 1
+    file_exists = os.path.isfile(f'{end_dest}{new_filename}')
+  os.rename(f'{start_dest}{filename}', f'{end_dest}{new_filename}')
 
 
 for filename in os.listdir(directory):
@@ -28,6 +33,6 @@ for filename in os.listdir(directory):
     continue
   if filename.startswith('.'):
     continue
-  if not filename.endswith(".lnk"):
+  if not filename.endswith('.lnk'):
     create_shortcut(filename, directory)
     move_file(filename, directory, directory_move)
