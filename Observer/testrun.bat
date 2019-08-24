@@ -1,0 +1,2 @@
+python observing_clear.py
+pause
