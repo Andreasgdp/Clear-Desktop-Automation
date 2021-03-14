@@ -3,7 +3,7 @@ import winshell
 
 directory = 'C:/Users/andre/Desktop/'
 
-directory_move = 'C:/Users/andre/OneDrive - Syddansk Erhvervsskole/MISC/'
+directory_move = 'C:/Users/andre/OneDrive - Syddansk Universitet/MISC'
 
 
 def create_shortcut(filename, dest):
